@@ -13,5 +13,9 @@ log(WARN, "Warn test");
 log(ERROR, "Error test");
 ```
 
+Result:
+
+![Example](/images/example.png)
+
 Author: Laura Schäfer <elerianae@gmail.com>
 License: MIT
