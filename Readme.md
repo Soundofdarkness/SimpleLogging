@@ -7,10 +7,18 @@ Example Use:
 ```nim
 import simplelogging
 
+# Normal logging method 
 log(DEBUG, "Debug test");
 log(INFO, "Info test");
 log(WARN, "Warn test");
 log(ERROR, "Error test");
+
+# Shortcut methods
+debug("Test");
+info("Test");
+warn("Test");
+error("Test");
+
 ```
 
 Result:
