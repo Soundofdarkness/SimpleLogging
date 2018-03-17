@@ -32,3 +32,16 @@ proc log(level: LogLevel, line: string) {.exportc.} =
         of ERROR:
             let outline = time & " | ERROR | " & line;
             output(outline, fgRed);
+
+
+proc debug(line: string) {.exportc.}=
+    log(DEBUG, line);
+
+proc info(line: string) {.exportc.}=
+    log(INFO, line);
+
+proc warn(line: string) {.exportc.}=
+    log(WARN, line);
+
+proc error(line: string) {.exportc.}=
+    log(ERROR, line);
