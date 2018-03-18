@@ -17,7 +17,7 @@ proc output(line: string, color: ForegroundColor) =
 
             
 
-proc log(level: LogLevel, line: string) {.exportc.} =
+proc log*(level: LogLevel, line: string) {.exportc.} =
     let time = $now();
     case level:
         of DEBUG:
@@ -34,14 +34,14 @@ proc log(level: LogLevel, line: string) {.exportc.} =
             output(outline, fgRed);
 
 
-proc debug(line: string) {.exportc.}=
+proc debug*(line: string) {.exportc.}=
     log(DEBUG, line);
 
-proc info(line: string) {.exportc.}=
+proc info*(line: string) {.exportc.}=
     log(INFO, line);
 
-proc warn(line: string) {.exportc.}=
+proc warn*(line: string) {.exportc.}=
     log(WARN, line);
 
-proc error(line: string) {.exportc.}=
+proc error*(line: string) {.exportc.}=
     log(ERROR, line);
